@@ -1,28 +1,24 @@
-import Link from 'next/link'
-import React from 'react'
-import { Button, Flex, Spacer } from '@chakra-ui/react'
-import MenuHam from './Menu'
+import Link from 'next/link';
+import React from 'react';
+import { Flex, Spacer } from '@chakra-ui/react';
+import MenuHam from './Menu';
+import HeaderButtons from './HeaderButtons';
 
 const Header = () => {
-  return (
-    <header>
-      <Flex className='container items-center'>
-        <h1>
-          <Link href={'/'}>logo</Link>
-        </h1>
-        <Spacer />
-        <div>
-          <Button colorScheme='teal' variant='ghost'>
-            알림
-          </Button>
-          <Button colorScheme='teal' variant='ghost'>
-            검색
-          </Button>
-          <MenuHam />
-        </div>
-      </Flex>
-    </header>
-  )
-}
+    return (
+        <header className='py-2'>
+            <Flex className='container items-center'>
+                <h1>
+                    <Link href={'/'}>logo</Link>
+                </h1>
+                <Spacer />
+                <div>
+                    <HeaderButtons />
+                    <MenuHam />
+                </div>
+            </Flex>
+        </header>
+    );
+};
 
-export default Header
+export default Header;
