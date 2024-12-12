@@ -44,7 +44,7 @@ export default function RootLayout({
         <html lang='ko'>
             <body>
                 <ChakraProvider>
-                    <Wrap id='wrap'>
+                    <Wrap>
                         <Header />
                         <main>{children}</main>
                         <footer>푸터</footer>
