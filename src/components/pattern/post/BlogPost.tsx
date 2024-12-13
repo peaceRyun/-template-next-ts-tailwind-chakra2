@@ -13,7 +13,6 @@ const BlogPost = ({ isCard, data }: IBlongPostProps) => {
             {/* PostBody */}
             <PostBody data={data} />
             {/* PostFooter */}
-            <PostFoot type='feed' />
             <PostFoot type='personal' />
         </Wrapper>
     );

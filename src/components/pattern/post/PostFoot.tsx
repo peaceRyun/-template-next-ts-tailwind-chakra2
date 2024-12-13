@@ -33,21 +33,30 @@ const PostFoot = ({ type = 'feed' }) => {
     );
 
     const PersonalFooter = () => (
-        <div className='flex flex-col space-y-2 pt-4'>
-            <hr className='border-t border-gray-200 my-4' />
-            <div className='flex justify-between items-center px-4 py-2'>
-                {/* Edit/Delete buttons */}
-                <div className='flex space-x-2'>
-                    <button className='text-sm text-gray-600 hover:text-gray-900 px-3 py-1 rounded-md hover:bg-gray-100'>
-                        수정
-                    </button>
-                    <button className='text-sm text-red-600 hover:text-red-900 px-3 py-1 rounded-md hover:bg-red-50'>
-                        삭제
-                    </button>
-                </div>
+        <div className='flex flex-col space-y-4 pb-4'>
+            {/* Tags */}
+            <div className='flex flex-wrap gap-2 px-4'>
+                <span className='px-2 py-1 text-xs font-medium text-teal-600 bg-teal-50 rounded-full hover:bg-teal-100 transition-colors'>
+                    CRUD
+                </span>
+                <span className='px-2 py-1 text-xs font-medium text-teal-600 bg-teal-50 rounded-full hover:bg-teal-100 transition-colors'>
+                    next.js
+                </span>
+            </div>
 
-                {/* Date */}
-                <div className='text-gray-500 text-sm'>2024년 12월 5일</div>
+            {/* Post Info */}
+            <div className='flex items-center space-x-2 px-4 text-sm text-gray-500'>
+                <span>2일 전</span>
+                <span className='text-gray-300'>•</span>
+                <span>0개의 댓글</span>
+                <span className='text-gray-300'>•</span>
+                <div className='flex items-center space-x-1'>
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='size-6'>
+                        <path d='m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z' />
+                    </svg>
+
+                    <span>0</span>
+                </div>
             </div>
         </div>
     );

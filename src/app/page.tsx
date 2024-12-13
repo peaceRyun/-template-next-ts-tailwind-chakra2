@@ -27,7 +27,7 @@ const settingMenuItems = [
 export default function Home() {
     return (
         <Container className='flex flex-col gap-5'>
-            <Flex>
+            <Flex className='py-3'>
                 <nav className='my-auto'>
                     <ul className='flex gap-3 items-center'>
                         <li>
