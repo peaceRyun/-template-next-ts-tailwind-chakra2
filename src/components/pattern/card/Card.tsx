@@ -8,7 +8,7 @@ interface ICardProps {
 const Card = ({ children }: ICardProps) => {
     return (
         <>
-            <ChakraCard className=' overflow-hidden'>{children}</ChakraCard>
+            <ChakraCard className=' overflow-hidden mb-4'>{children}</ChakraCard>
         </>
     );
 };

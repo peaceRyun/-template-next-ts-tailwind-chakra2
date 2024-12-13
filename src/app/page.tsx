@@ -3,6 +3,7 @@
 import Container from '@/components/layout/Container';
 import Menu from '@/components/pattern/Menu';
 import BlogPost from '@/components/pattern/post/BlogPost';
+import { mockBlogPosts } from '@/data/restaurant-blog-posts';
 import { Flex, Spacer } from '@chakra-ui/react';
 import { EllipsisVertical } from 'lucide-react';
 import Link from 'next/link';
@@ -48,9 +49,11 @@ export default function Home() {
                     <Menu buttonText={<EllipsisVertical />} items={settingMenuItems} variant='ghost' />
                 </div>
             </Flex>
+
             {/* BlogPost */}
-            <BlogPost isCard />
-            <BlogPost />
+            {mockBlogPosts.map((post) => (
+                <BlogPost key={post.id} isCard data={post} />
+            ))}
         </Container>
     );
 }
